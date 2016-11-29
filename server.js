@@ -8,6 +8,10 @@ app.get('/' , function(req, res){
 	res.send("Hello world!!!");
 });
 
+app.get('/hello/:name' , function(req,res){
+	res.send("Hello " + req.params.name);
+})
+
 app.listen(PORT, function(){
 	console.log("as");
 });
